@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <script defer src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+    <style>
+        button {
+            float: left;
+            width: 90%;
+            margin: 5px;
+            
+        }
+    </style>
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+
+        window.addEventListener("DOMContentLoaded", () => {
+            loadm3u('https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/tf1plus/tf1.m3u8');
+
+        }
+
+        $(document).ready(function () {
+
+            alert('this has been triggered after page has loaded'); 
+            $("body").css("background-color", "red");
+        });
+
+    </script>
+</head>
+<body>
+    <div style="float:right;width:80%;height:100%;display:block">
+        <video style="float:right"
+               id="my-video"
+               class="video-js"
+               controls
+               preload="auto"
+               width="1280"
+               height="720"
+               data-setup='{}'>
+            <source id="source" src="https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/tf1plus/tf1.m3u8" type="application/x-mpegURL" />
+        </video>
+
+    </div>
+
+    <div style="left:0;top:0;position:fixed;width:20%;height:100%">
+
+
+        <button onclick="loadm3u('https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/tf1plus/tf1.m3u8')">TF1</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fr2.m3u8')">FRANCE 2</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fr3.m3u8')">FRANCE 3</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fauv.m3u8')">FRANCE 3 AUVERGNE</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fr4.m3u8')">FRANCE 4</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/ftv/py/fr5.m3u8')">FRANCE 5</button>
+        <button style="background-color:orange" onclick="loadm3u('http://live.tntdirect.tv/9CM2pADCxF/w5BA32MP6P/6.m3u8')">M6</button>
+        <button onclick="loadm3u('https://artesimulcast.akamaized.net/hls/live/2031003/artelive_fr/index.m3u8')">ARTÉ</button>
+        <button onclick="loadm3u('https://nrj12.nrjaudio.fm/hls/live/2038374/nrj_12/master.m3u8')">NRJ 12</button>
+        <button onclick="loadm3u('https://cherie25.nrjaudio.fm/hls/live/2038375/c25/master.m3u8')">CHÉRIE 25</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/tf1plus/tmc.m3u8')">TMC</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/tf1plus/tfx.m3u8')">TFX</button>
+        <button onclick="loadm3u('https://ott.tv5monde.com/Content/HLS/Live/channel(fbs)/variant.m3u8')">TV5 MONDE</button>
+        <button onclick="loadm3u('https://d2mt8for1pddy4.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-6uronj7gzvy4j/index.m3u8')">RMC DÉCOUVERTE</button>
+        <button onclick="loadm3u('https://d36bxc1bknkxrk.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-3ewcp19zjaxpt/index.m3u8')">RMC STORY</button>
+        <button onclick="loadm3u('https://amg02162-newenconnect-amg02162c2-rakuten-us-1981.playouts.now.amagi.tv/playlist/amg02162-newenconnect-100pour100docs-rakutenus/playlist.m3u8')">100% DOCS</button>
+        <button onclick="loadm3u('https://rakuten-films-francais-1-eu.rakuten.wurl.tv/3000.m3u8')">FILMS FRANÇAIS</button>
+        <button onclick="loadm3u('https://rakutenaa-zylo-screamin-rakuten-p11ej.amagi.tv/playlist/rakutenAA-zylo-screamin-rakuten/cb57351c6573628f84c83e67cef24982967b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64ed6abb64244db6dbfb102488b2f57f382419f864fb986dd46cd118f72ec159cc7a696824381868c35fc05b5360b5b7078ced120a10b3cdca9f2afcc441058276437c091d198682e874940598a8ea1dd40ca63020db8e31a519e158a409435f01ac2ca4a342fd2c782cc514837a3c15a743fe2a5c8637af656cf05da90c8a7075d8ce0116a40c768951023379ef8863588d31085f455ed54f0ca59b2f311c8e7d9abeea5994fd109c5cee69d772524065051d40df2c82fb35daccb744d675cad6b64d49e6878a0ba46404205eaa54bc61c0bbc94bb82cd0728f0c77a30f54dd6410c60c0352329ab7db9d20b6587220592267dd56c75d112b2e877b590d2eb506fee9edf14ab26af941ac2fa079e683e720ba7bd790c12022e86ae2e26184dee69a893c6e87c0c40cbf2cef5cf1a782431055d018eadb623cac090674d58911315617211059f4b833a884e1a566eec1ad4e35827d4487163b6e96f2f2f06fcffb88f83d9dd57f52e83bd9a171b7b0833f3637f6904ba9b845aef3758717c49f266494abe155551e593dd9ff7a56ac99924e778551d6dc1ff00524b35576619908467c75483ca05d87bab810e6456740be3dcfa57bda63481b9f57a98dafca1/9/1920x1080_4716800/index.m3u8')">SCREAM IN</button>
+        <button onclick="loadm3u('https://hls-m015-live-aka-canalplus.akamaized.net/live/disk/cnews-clair-hd/hls-v3-hd-clair/cnews-clair-hd.m3u8')">CNEWS</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/btv/py/lci1.m3u8')">LCI</button>
+        <button onclick="loadm3u('https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TV/index.m3u8?start=LIVE&end=END')">BFM</button>
+        <button onclick="loadm3u('https://d1qswsont218xa.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-im2kwho8ev6jk/mv_fr.m3u8')">MOTORSPORT</button>
+        <button onclick="loadm3u('https://amg00090-blueantmedia-naturetime-samsungfr-yakbf.amagi.tv/playlist/amg00090-blueantmedia-naturetime-samsungfr/playlist.m3u8')">NATURE TIME</button>
+
+
+        <button onclick="loadm3u('https://rakutenaa-zylo-screamin-rakuten-p11ej.amagi.tv/playlist/rakutenAA-zylo-screamin-rakuten/cb57351c6573628f84c83e67cef24982967b3dcb0e6c886470af4a9765d97800dbe8ae84ae5b910c4c9e1fc061017d360439cd1dd56c49c1da63b820743c4b21fdcde00080dd0d0cb1df11292ca36265299a7369cc350f7bd2ec5a2f803ebe764c53cb017c593f88f258ae774cc59e0a957f39e8fc8b307b24455a9c5a43e6a64ed6abb64244db6dbfb102488b2f57f382419f864fb986dd46cd118f72ec159cc7a696824381868c35fc05b5360b5b7078ced120a10b3cdca9f2afcc441058276437c091d198682e874940598a8ea1dd40ca63020db8e31a519e158a409435f01ac2ca4a342fd2c782cc514837a3c15a743fe2a5c8637af656cf05da90c8a7075d8ce0116a40c768951023379ef8863588d31085f455ed54f0ca59b2f311c8e7d9abeea5994fd109c5cee69d772524065051d40df2c82fb35daccb744d675cad6b64d49e6878a0ba46404205eaa54bc61c0bbc94bb82cd0728f0c77a30f54dd6410c60c0352329ab7db9d20b6587220592267dd56c75d112b2e877b590d2eb506fee9edf14ab26af941ac2fa079e683e720ba7bd790c12022e86ae2e26184dee69a893c6e87c0c40cbf2cef5cf1a782431055d018eadb623cac090674d58911315617211059f4b833a884e1a566eec1ad4e35827d4487163b6e96f2f2f06fcffb88f83d9dd57f52e83bd9a171b7b0833f3637f6904ba9b845aef3758717c49f266494abe155551e593dd9ff7a56ac99924e778551d6dc1ff00524b35576619908467c75483ca05d87bab810e6456740be3dcfa57bda63481b9f57a98dafca1/9/1920x1080_4716800/index.m3u8')">SCREAM IN</button>
+        <button onclick="loadm3u('https://hls-m015-live-aka-canalplus.akamaized.net/live/disk/cnews-clair-hd/hls-v3-hd-clair/cnews-clair-hd.m3u8')">CNEWS</button>
+        <button onclick="loadm3u('https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/btv/py/lci1.m3u8')">LCI</button>
+        <button onclick="loadm3u('https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TV/index.m3u8?start=LIVE&end=END')">BFM</button>
+        <button onclick="loadm3u('https://d1qswsont218xa.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-im2kwho8ev6jk/mv_fr.m3u8')">MOTORSPORT</button>
+        <button onclick="loadm3u('https://amg00090-blueantmedia-naturetime-samsungfr-yakbf.amagi.tv/playlist/amg00090-blueantmedia-naturetime-samsungfr/playlist.m3u8')">NATURE TIME</button>
+
+
+    </div>
+    <script>
+
+
+
+
+        function loadm3u(source) {
+            var player = videojs('my-video');
+            player.src({ type: 'application/x-mpegURL', src: source });
+            player.load();
+            player.play();
+        }
+    </script>
+</body>
+</html>
